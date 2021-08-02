@@ -62,7 +62,7 @@ class RSS(commands.Cog):
             for i, image in enumerate(content_images):
                 tag_name = f"content_image{str(i + 1).zfill(2)}"
                 try:
-                    rss_object[tag_name] = image["data-src"]
+                    rss_object[tag_name] = image["src"]
                     rss_object["is_special"].append(tag_name)
                 except KeyError:
                     pass
